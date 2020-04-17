@@ -1,0 +1,53 @@
+\contentsline {section}{\numberline {1}Trigonometry}{1}%
+\contentsline {subsection}{\numberline {1.1}Trig Identities and Formulas}{1}%
+\contentsline {subsection}{\numberline {1.2}Hyperbolic Trigonometry}{3}%
+\contentsline {section}{\numberline {2}Matrices}{5}%
+\contentsline {subsection}{\numberline {2.1}Basic Operations}{5}%
+\contentsline {subsection}{\numberline {2.2}Applications of Matrices}{5}%
+\contentsline {subsection}{\numberline {2.3}Identity and Inverse Matrices}{6}%
+\contentsline {section}{\numberline {3}Derivatives}{8}%
+\contentsline {subsection}{\numberline {3.1}Basic Rules}{8}%
+\contentsline {subsection}{\numberline {3.2}Trigonometric Functions}{9}%
+\contentsline {subsection}{\numberline {3.3}Hyperbolic Functions}{10}%
+\contentsline {section}{\numberline {4}Integrals}{11}%
+\contentsline {subsection}{\numberline {4.1}Techniques of Integration}{11}%
+\contentsline {section}{\numberline {5}Series}{12}%
+\contentsline {subsection}{\numberline {5.1}Types of Series}{12}%
+\contentsline {subsection}{\numberline {5.2}Testing for Convergence}{12}%
+\contentsline {subsection}{\numberline {5.3}Power Series}{14}%
+\contentsline {subsection}{\numberline {5.4}Taylor Series}{14}%
+\contentsline {subsection}{\numberline {5.5}List of Common Taylor Series}{15}%
+\contentsline {section}{\numberline {6}Vectors}{16}%
+\contentsline {subsection}{\numberline {6.1}Basic Properties}{16}%
+\contentsline {subsection}{\numberline {6.2}Dot Product}{16}%
+\contentsline {subsection}{\numberline {6.3}Cross Product}{17}%
+\contentsline {section}{\numberline {7}Vector Functions}{18}%
+\contentsline {subsection}{\numberline {7.1}Basics and Properties}{18}%
+\contentsline {subsection}{\numberline {7.2}Arc Length}{18}%
+\contentsline {subsection}{\numberline {7.3}TNB Frames}{19}%
+\contentsline {subsection}{\numberline {7.4}Curvature, Torsion, and Osculating Circles}{19}%
+\contentsline {section}{\numberline {8}Multivariable Functions}{20}%
+\contentsline {subsection}{\numberline {8.1}Lines and Planes}{20}%
+\contentsline {subsection}{\numberline {8.2}Distances}{20}%
+\contentsline {subsection}{\numberline {8.3}Cylinder and Surfaces}{21}%
+\contentsline {subsection}{\numberline {8.4}Limits of Multivariable Functions}{21}%
+\contentsline {section}{\numberline {9}Partial Derivatives}{22}%
+\contentsline {subsection}{\numberline {9.1}Basics}{22}%
+\contentsline {subsection}{\numberline {9.2}Multivariable Chain Rule}{22}%
+\contentsline {subsection}{\numberline {9.3}Gradient}{22}%
+\contentsline {subsection}{\numberline {9.4}Local Extrema of Functions}{23}%
+\contentsline {subsection}{\numberline {9.5}LaGrange Multipliers}{23}%
+\contentsline {section}{\numberline {10}Multiple Integrals}{24}%
+\contentsline {subsection}{\numberline {10.1}Double Integrals}{24}%
+\contentsline {subsection}{\numberline {10.2}Triple Integrals}{24}%
+\contentsline {subsection}{\numberline {10.3}C.O.M and Moments of Inertia}{25}%
+\contentsline {subsection}{\numberline {10.4}Cylindrical and Spherical Coordinates}{26}%
+\contentsline {subsection}{\numberline {10.5}The Jacobian}{26}%
+\contentsline {section}{\numberline {11}Vector Calculus}{27}%
+\contentsline {subsection}{\numberline {11.1}Vector Fields}{27}%
+\contentsline {subsection}{\numberline {11.2}Divergence and Curl}{27}%
+\contentsline {subsection}{\numberline {11.3}Line Integrals}{28}%
+\contentsline {subsection}{\numberline {11.4}Line Integral on a Conservative Vector Field}{29}%
+\contentsline {subsection}{\numberline {11.5}Green's Theorem}{29}%
+\contentsline {subsection}{\numberline {11.6}Surface Integrals}{30}%
+\contentsline {subsection}{\numberline {11.7}Stoke's Theorem}{31}%

@@ -1,0 +1,1851 @@
+\documentclass[12pt]{article}
+
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+\usepackage{amsfonts,amsmath,amssymb}
+\usepackage[none]{hyphenat} 
+\usepackage[nottoc,notlot,notlof]{tocbibind}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{yhmath}
+\usepackage{mathdots}
+\usepackage{MnSymbol}
+\usepackage{etoolbox}
+\usepackage{esint}
+\usepackage{cleveref}
+\usepackage{pgf}
+\usepackage{verbatim}
+\usepackage{environ}
+\usepackage{tcolorbox}
+\usepackage{mathtools}
+
+
+
+
+\numberwithin{equation}{subsection}
+
+\newcommand{\lap}{\mathscr{L}}
+\newcommand{\lnp}[1]{\ln\left( #1 \right)}
+\newcommand{\sinp}[1]{\sin\left( #1 \right)}
+\newcommand{\cosp}[1]{\cos\left( #1 \right)}
+\newcommand{\tanp}[1]{\tan\left( #1 \right)}
+\newcommand{\secp}[1]{\sec\left( #1 \right)}
+\newcommand{\cscp}[1]{\csc\left( #1 \right)}
+\newcommand{\cotp}[1]{\cot\left( #1 \right)}
+\newcommand{\vecp}[1]{\langle #1 \rangle}
+\newcommand{\magp}[1]{\| #1 \|}
+\newcommand{\absp}[1]{\left\vert #1 \right\vert}
+\newcommand{\parx}[1]{\frac{\partial #1}{\partial x}}
+\newcommand{\pary}[1]{\frac{\partial #1}{\partial y}}
+\newcommand{\parz}[1]{\frac{\partial #1}{\partial z}}
+\newcommand{\derx}[1]{\frac{d #1}{dx}}
+\newcommand{\dery}[1]{\frac{d #1}{dy}}
+\newcommand{\dert}[1]{\frac{d #1}{dt}}
+\newcommand{\deryx}{\frac{dy}{dx}}
+\newcommand{\inda}{\hspace{.5cm}}
+\newcommand{\indb}{\hspace{1cm}}
+\newcommand{\indc}{\hspace{1.5cm}}
+\newcommand{\indd}{\hspace{2cm}}
+\newcommand{\inde}{\hspace{2.5cm}}
+\newcommand{\indf}{\hspace{3cm}}
+\newcommand{\indg}{\hspace{3.5cm}}
+\newcommand{\indh}{\hspace{4cm}}
+\newcommand{\indi}{\hspace{4.5cm}}
+\newcommand{\indj}{\hspace{5cm}}
+\newcommand{\indk}{\hspace{5.5cm}}
+\newcommand{\indl}{\hspace{6cm}}
+\newcommand{\indm}{\hspace{6.5cm}}
+\newcommand{\indn}{\hspace{7cm}}
+\newcommand{\indo}{\hspace{7.5cm}}
+\newcommand{\indp}{\hspace{8cm}}
+\newcommand{\indq}{\hspace{8.5cm}}
+\newcommand{\indr}{\hspace{9cm}}
+\newcommand{\inds}{\hspace{9.5cm}}
+\newcommand{\indt}{\hspace{10cm}}
+\newcommand{\indu}{\hspace{10.5cm}}
+\newcommand{\indv}{\hspace{11cm}}
+\newcommand{\indw}{\hspace{11.5cm}}
+\newcommand{\indx}{\hspace{12cm}}
+\newcommand{\indy}{\hspace{12.5cm}}
+\newcommand{\indz}{\hspace{13cm}}
+\newcommand{\exa}{\noindent \underline{Example}: \hspace{1cm}}
+\newcommand{\longsquiggly}{\xymatrix{{}\ar@{~>}[r]&{}}}
+
+
+
+\DeclareMathOperator{\arcsec}{arcsec}
+\DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\arccsc}{arccsc}
+\DeclareMathOperator{\sech}{sech}
+\DeclareMathOperator{\csch}{csch}
+\DeclareMathOperator{\arcsinh}{arcsinh}
+\DeclareMathOperator{\arccosh}{arccosh}
+\DeclareMathOperator{\arctanh}{arctanh}
+\DeclareMathOperator{\arccsch}{arccsch}
+\DeclareMathOperator{\arcsech}{arcsech}
+\DeclareMathOperator{\arccoth}{arccoth}
+\DeclareMathOperator{\expo}{exp}
+\DeclareMathOperator{\trace}{trace}
+\DeclareMathOperator{\vdiv}{div}
+\DeclareMathOperator{\vcurl}{curl}
+
+
+\newcommand{\expop}[1]{\expo \left( #1 \right)}
+
+
+
+
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+\begin{Large}
+Mathematics\\
+\end{Large}
+\vfill
+\line(1,0){469.75502}\\[1mm]
+\begin{Large}
+\textbf{Math Review Packet}
+\end{Large}
+\line(1,0){469.75502}
+\vfill
+By Michael Kasprzak,\\
+February 18, 2019
+\end{center}
+\end{titlepage}
+
+
+\pagenumbering{roman}
+
+
+\tableofcontents
+\cleardoublepage
+
+
+\newpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\section{Trigonometry}
+\subsection{Trig Identities and Formulas}
+
+
+
+
+\begin{flushleft}
+Cofunction Identities
+\begin{equation}
+\sinp{\theta}=\cosp{\frac{\pi}{2}-\theta}
+\end{equation}
+\begin{equation}
+\cosp{\theta}=\sinp{\frac{\pi}{2}-\theta}
+\end{equation}
+\begin{equation}
+\tanp{\theta}=\cotp{\frac{\pi}{2}-\theta}
+\end{equation}
+\begin{equation}
+\cscp{\theta}=\secp{\frac{\pi}{2}-\theta}
+\end{equation}
+\begin{equation}
+\secp{\theta}=\cscp{\frac{\pi}{2}-\theta}
+\end{equation}
+\begin{equation}
+\cotp{\theta}=\tanp{\frac{\pi}{2}-\theta}
+\end{equation}
+
+Reciprocal Identities
+\begin{equation}
+\sinp{\theta}=\frac{1}{\cscp{\theta}}
+\end{equation}
+\begin{equation}
+\cosp{\theta}=\frac{1}{\secp{\theta}}
+\end{equation}
+\begin{equation}
+\tanp{\theta}=\frac{1}{\cotp{\theta}}
+\end{equation}
+\begin{equation}
+\cscp{\theta}=\frac{1}{\sinp{\theta}}
+\end{equation}
+\begin{equation}
+\secp{\theta}=\frac{1}{\cosp{\theta}}
+\end{equation}
+\begin{equation}
+\cotp{\theta}=\frac{1}{\tanp{\theta}}
+\end{equation}
+
+Quotient Identities
+\begin{equation}
+\tanp{\theta}=\frac{\sinp{\theta}}{\cosp{\theta}}
+\end{equation}
+\begin{equation}
+\cotp{\theta}=\frac{\cosp{\theta}}{\sinp{\theta}}
+\end{equation}
+
+Pythagorean Identities
+\begin{equation}
+\sin^{2}{\theta}+\cos^2{\theta}=1
+\end{equation}
+\begin{equation}
+1+\tan^2{\theta}=\sec^2{\theta}
+\end{equation}
+\begin{equation}
+1+\cot^2{\theta}=\csc^2{\theta}
+\end{equation}
+\end{flushleft}
+
+\newpage
+Sum and Difference Formulas
+\begin{equation}
+\sinp{A \pm B}= \sin{A} \cos{B} \pm \cos{A} \sin{B}
+\end{equation}
+\begin{equation}
+\cosp{A \pm B}= \cos{A} \cos{B} \mp \sin{A} \sin{B}
+\end{equation}
+\begin{equation}
+\tanp{A \pm B}=\frac{\tan{A} \pm \tan{B}}{1 \mp \tan{A} \tan{B}}
+\end{equation}
+
+Odd/Even Formulas
+\begin{equation}
+\sinp{-\theta}=-\sinp{\theta}
+\end{equation}
+\begin{equation}
+\cosp{-\theta}=\cosp{\theta}
+\end{equation}
+\begin{equation}
+\tanp{-\theta}=-\tanp{\theta}
+\end{equation}
+\begin{equation}
+\cscp{-\theta}=-\cscp{\theta}
+\end{equation}
+\begin{equation}
+\secp{-\theta}=\secp{\theta}
+\end{equation}
+\begin{equation}
+\cotp{-\theta}=-\cotp{\theta}
+\end{equation}
+
+Double Angle Formula
+\begin{equation}
+\sinp{2\theta}=2\sin{\theta} \cos{\theta}
+\end{equation}
+\begin{equation}
+\cosp{2\theta}=\cos^2{\theta}-\sin^2{\theta}
+\end{equation}
+\begin{equation}
+\ \ \ \ \ \ \ \ = 2\cos^2\theta - 1
+\end{equation}
+\begin{equation}
+\ \ \ \ \ \ \ \ = 1 - 2\sin^2 \theta
+\end{equation}
+\begin{equation}
+\tanp{2\theta}=\frac{2\tan{\theta}}{1-\tan^2{\theta}}
+\end{equation}
+
+Half-Angle Formulas
+\begin{equation}
+\sinp{\frac{\theta}{2}}= \pm \sqrt{\frac{1-\cos{\theta}}{2}}
+\end{equation}
+\begin{equation}
+\cosp{\frac{\theta}{2}}= \pm \sqrt{\frac{1+\cos{\theta}}{2}}
+\end{equation}
+\begin{equation}
+\tanp{\frac{\theta}{2}}= \frac{1-\cos{\theta}}{\sin{\theta}}=\frac{\sin{\theta}}{1+\cos{\theta}}
+\end{equation}
+
+Squared Identities
+\begin{equation}
+\sin^2{\theta}=\frac{1-\cos{2\theta}}{2}
+\end{equation}
+\begin{equation}
+\cos^2{\theta}=\frac{1+\cos{2\theta}}{2}
+\end{equation}
+\begin{equation}
+\tan^2{\theta}=\frac{1-\cos{2\theta}}{1+\cos{2\theta}}
+\end{equation}
+\newpage
+
+Product to Sum Formulas
+\begin{equation}
+\sin{A} \sin{B} = \frac{1}{2}[\cosp{A-B}-\cosp{A+B}]
+\end{equation}
+\begin{equation}
+\cos{A} \cos{B} = \frac{1}{2}[\cosp{A-B}+\cosp{A+B}]
+\end{equation}
+\begin{equation}
+\sin{A} \cos{B} = \frac{1}{2}[\sinp{A+B}+\sinp{A-B}]
+\end{equation}
+\begin{equation}
+\cos{A} \sin{B} = \frac{1}{2}[\sinp{A+B}-\sinp{A-B}]
+\end{equation}
+
+Sum to Product Identities
+\begin{equation}
+\sin{A} + \sin{B} = 2\sinp{\frac{A+B}{2}} \cosp{\frac{A-B}{2}}
+\end{equation}
+\begin{equation}
+\sin{A} - \sin{B} = 2\cosp{\frac{A+B}{2}} \sinp{\frac{A-B}{2}}
+\end{equation}
+\begin{equation}
+\cos{A} + \cos{B} = 2\cosp{\frac{A+B}{2}} \cosp{\frac{A-B}{2}}
+\end{equation}
+\begin{equation}
+\cos{A} + \cos{B} = 2\sinp{\frac{A+B}{2}} \sinp{\frac{A-B}{2}}
+\end{equation}
+
+\subsection{Hyperbolic Trigonometry}
+
+Functions and Definitions
+\begin{equation}
+\sinh{x}=\frac{e^{x}-e^{-x}}{2}
+\end{equation}
+\begin{equation}
+\cosh{x}=\frac{e^{x}+e^{-x}}{2}
+\end{equation}
+\begin{equation}
+\tanh{x}=\frac{e^{x}-e^{-x}}{e^{x}+e^{-x}}
+\end{equation}
+\begin{equation}
+\csch{x}=\frac{2}{e^{x}-e^{-x}}
+\end{equation}
+\begin{equation}
+\sech{x}=\frac{2}{e^{x}+e^{-x}}
+\end{equation}
+\begin{equation}
+\coth{x}=\frac{e^{x}+e^{-x}}{e^{x}-e^{-x}}
+\end{equation}
+\newpage
+
+
+Definitions of Inverse Functions
+\begin{equation}
+\arcsinh{x}=\lnp{x+ \sqrt{x^{2}+1}}
+\end{equation}
+\begin{equation}
+\arccosh{x}=\lnp{x \pm \sqrt{x^{2}-1}}
+\end{equation}
+\begin{equation}
+\arctanh{x}= \frac{1}{2} \lnp{\frac{1+x}{1-x}}
+\end{equation}
+\begin{equation}
+\arccsch{x}=\lnp{\frac{1+\sqrt{x^{2}+1}}{x}}
+\end{equation}
+\begin{equation}
+\arcsech{x}=\lnp{\frac{1 \pm \sqrt{x^{2}+1}}{x}}
+\end{equation}
+\begin{equation}
+\arccoth{x}= \frac{1}{2} \lnp{\frac{x+1}{x-1}}
+\end{equation}
+
+Hyperbolic Identities
+\begin{equation}
+\sinh{-x}=-\sinh{x}
+\end{equation}
+\begin{equation}
+\cosh{-x}=\cosh{x}
+\end{equation}
+\begin{equation}
+\cosh^2{x}-\sinh^2{x}=1
+\end{equation}
+\begin{equation}
+\sech^2{x}=1-\tanh^2{x}
+\end{equation}
+\begin{equation}
+\sinh{x+y}=\sinh{x}\cosh{y} + \cosh{x}\sinh{y}
+\end{equation}
+\begin{equation}
+\cosh{x+y}=\cosh{x}\cosh{y} + \sinh{x}\sinh{y}
+\end{equation}
+\begin{equation}
+\sinh{2x}=2\sinh{x}\cosh{x}
+\end{equation}
+\begin{equation}
+\cosh{2x}=\sinh^2{x}+\cosh^2{x}
+\end{equation}
+\begin{equation}
+\sinh^2{x}=\frac{1}{2}(-1+\cosh{2x})
+\end{equation}
+\begin{equation}
+\cosh^2{x}=\frac{1}{2}(1+\cosh{2x})
+\end{equation}
+
+\newpage
+
+
+
+\section{Matrices}
+\subsection{Basic Operations}
+\begin{flushleft}
+Adding and Subtracting Matrices
+\begin{equation}
+\begin{bmatrix}
+a & b \\
+c & d \\
+\end{bmatrix} 
++
+\begin{bmatrix}
+e & f \\
+g & h \\
+\end{bmatrix}
+=
+\begin{bmatrix}
+a+e & b+f \\
+c+g & d+h \\
+\end{bmatrix}
+\end{equation}
+
+\begin{equation}
+\begin{bmatrix}
+a & b \\
+c & d \\
+\end{bmatrix} 
+-
+\begin{bmatrix}
+e & f \\
+g & h \\
+\end{bmatrix}
+=
+\begin{bmatrix}
+a-e & b-f \\
+c-g & d-h \\
+\end{bmatrix}
+\end{equation}
+
+Multiplying Matrices
+\begin{equation}
+\begin{bmatrix}
+a & b \\
+c & d \\
+\end{bmatrix} 
+\cdot
+\begin{bmatrix}
+e & f \\
+g & h \\
+\end{bmatrix}
+=
+\begin{bmatrix}
+ae+bg & af+bh \\
+ce+dg & cf+dh \\
+\end{bmatrix}
+\end{equation}
+
+Properties of Matrix Operations\\
+ \bigskip 
+Associative Property of Addition: \ \ \  \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ $(A+B)+C=A+(B+C)$\\
+Commutative Property of Addition: \  \ \ \ \ \ \ \  \ \ \ \ \ \ \ \ \ \ \ \ $A+B=B+A$\\
+Distributive Property: \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ $k(A \pm B)= kA \pm kB$\\
+Associative Property of Matrix Multiplication:\ \ \ \ \ \ \   $A(BC)=(AB)C$\\
+Left Distribution Property: \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ $A(B+C)=AB+AC$\\
+Right Distribution Property: \ \ \ \ \ \ \ \ \ \ \ \  \ \ \ \ \ \ \  \ \ \ \ \ \ \ \ \ \ $(A+B)C=AC+BC$\\
+Associative Property of Scalar Multiplication: \ \ \ \ \ \ \ $k(AB)=(kA)B=A(kB)$\\
+\bigskip
+
+Determinants
+\begin{equation}
+\textrm{det} \begin{bmatrix}
+a & b \\
+c & d \\
+\end{bmatrix}
+=
+\begin{bmatrix}
+\textcolor{blue}{a} & \textcolor{red}{b}\\
+\textcolor{red}{c} & \textcolor{blue}{d}\\
+\end{bmatrix}
+=
+\textcolor{blue}{ad}-\textcolor{red}{bc}
+\end{equation}
+
+\begin{equation}
+\textrm{det} \begin{bmatrix}
+a & b & c \\
+d & e & f \\
+g & h & i \\
+\end{bmatrix}
+=
+\begin{bmatrix}
+\textcolor{blue}{\ddots} & \textcolor{blue}{\ddots} & \textcolor{blue}{\ddots} \\
+\textcolor{blue}{\ddots} & \textcolor{blue}{\ddots} & \textcolor{blue}{\ddots} \\
+\textcolor{blue}{\ddots} & \textcolor{blue}{\ddots} & \textcolor{blue}{\ddots} \\
+\end{bmatrix}
+=
+\begin{bmatrix}
+\textcolor{red}{\udots} & \textcolor{red}{\udots} & \textcolor{red}{\udots} \\
+\textcolor{red}{\udots} & \textcolor{red}{\udots} & \textcolor{red}{\udots} \\
+\textcolor{red}{\udots} & \textcolor{red}{\udots} & \textcolor{red}{\udots} \\
+\end{bmatrix}=
+\textcolor{blue}{(aei+bfg+cdh)}-\textcolor{red}{(gec+dbi+ahf)}
+\end{equation}
+
+
+\subsection{Applications of Matrices}
+
+
+Area of Triangle with Vertices $(x_{1},y_{1}), \ (x_{2},y_{2}), \ (x_{3},y_{3})$
+\begin{equation}
+\textrm{Area}= \pm \frac{1}{2}
+\begin{bmatrix}
+x_{1} & y_{1} & 1 \\
+x_{2} & y_{2} & 1 \\
+x_{3} & y_{3} & 1\\
+\end{bmatrix}
+\end{equation} 
+\end{flushleft}
+\begin{center}
+$\pm$ to get positive area
+\end{center}
+\begin{flushleft}
+
+
+Cramer's Rule for 2x2 System
+$$ax+by=e$$
+$$cx+dy=f$$
+
+$$\textrm{Coefficient Matrix: A} 
+\begin{bmatrix}
+a & b \\
+c & d \\
+\end{bmatrix}$$
+\newpage
+
+Solutions 
+\begin{equation}
+x=\frac{\begin{bmatrix}
+e & b \\
+f & d \\
+\end{bmatrix}}{\textrm{detA}}
+\end{equation}
+
+\begin{equation}
+y=\frac{\begin{bmatrix}
+a & e \\
+c & f \\
+\end{bmatrix}}{\textrm{detA}}
+\end{equation}
+
+Cramer's Rule for 3x3 System
+$$ax+by+cz=j$$
+$$dx+ey+fz=k$$
+$$gx+hy+iz=l$$
+
+$$\textrm{Coefficient Matrix: A} 
+\begin{bmatrix}
+a & b & c\\
+d & e & f \\
+g & h & i \\
+\end{bmatrix}$$
+
+Solutions 
+\begin{equation}
+x=\frac{\begin{bmatrix}
+j & b & c\\
+k & e & f \\
+l & h & i \\
+\end{bmatrix}}{\textrm{detA}}
+\end{equation}
+
+\begin{equation}
+y=\frac{\begin{bmatrix}
+a & j & c\\
+d & k & f \\
+g & l & i \\
+\end{bmatrix}}{\textrm{detA}}
+\end{equation}
+
+\begin{equation}
+z=\frac{\begin{bmatrix}
+a & b & j \\
+d & e & k \\
+g & h & l \\
+\end{bmatrix}}{\textrm{detA}}
+\end{equation}  
+
+\subsection{Identity and Inverse Matrices}
+
+Identity Matrix: AI=A IA=A
+$$\textrm{2x2 Identity} \begin{bmatrix}
+1 & 0 \\
+0 & 1 \\
+\end{bmatrix}$$
+$$\textrm{3x3 Identity} \begin{bmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1 \\
+\end{bmatrix}$$
+Inverse Matrices: A and B are inverse matrices if AB=I and BA=I. A matrix only has an inverse is its dterminant $\neq 0$.
+\newpage
+
+Inverse of a 2x2 Matrix
+$$A=\begin{bmatrix}
+a & b \\
+c & d \\
+\end{bmatrix}$$
+
+\begin{equation}
+A^{-1}=\frac{1}{\vert A \vert }\begin{bmatrix}
+d & -b \\
+-c & a \\
+\end{bmatrix}
+=
+\frac{1}{ad-cb }\begin{bmatrix}
+d & -b \\
+-c & a \\
+\end{bmatrix}
+\end{equation}
+
+Using Inverse Matrices to Solve Systems of Equations
+$$ax+by=e$$
+$$cx+dy=f$$
+
+$$\textrm{Coefficient Matrix:} \ A= 
+\begin{bmatrix}
+a & b \\
+c & d \\
+\end{bmatrix}$$
+$$\textrm{Variable Matrix:} \ X=\begin{bmatrix}
+x\\
+y\\
+\end{bmatrix}$$
+$$\textrm{Matrix of Constants:} \ B=\begin{bmatrix}
+e\\
+f\\
+\end{bmatrix}$$
+
+1. Setup Equation 
+\begin{equation}
+AX=B
+\end{equation}
+2. Find $A^{-1}$\\
+3. Multiply Each Side by $A^{-1}$
+\begin{equation}
+A^{-1}AX=A^{-1}B
+\end{equation}
+\begin{equation}
+X=A^{-1}B
+\end{equation}
+\begin{equation}
+X=\begin{bmatrix}
+\frac{d}{\textrm{det A}} & \frac{-c}{\textrm{det A}} \\
+\frac{-b}{\textrm{det A}} & \frac{a}{\textrm{det A}} \\
+\end{bmatrix}
+\begin{bmatrix}
+e\\
+f\\
+\end{bmatrix}
+=
+\begin{bmatrix}
+\frac{de-cf}{\textrm{detA}}\\
+\frac{af-be}{\textrm{detA}}\\
+\end{bmatrix}
+= \begin{bmatrix}
+x\\
+y\\
+\end{bmatrix}
+\end{equation}
+
+\begin{equation}
+x=\frac{de-cf}{\textrm{detA}}
+\end{equation}
+\begin{equation}
+y=\frac{af-be}{\textrm{detA}}
+\end{equation}
+
+
+
+
+\newpage
+\end{flushleft}
+
+
+
+\section{Derivatives}
+\subsection{Basic Rules}
+\begin{flushleft}
+Constant Term
+\begin{equation}
+\frac{d}{dx}[C]=0
+\end{equation}\\
+
+Constant Multiple Rule
+\begin{equation}
+\frac{d}{dx}[Cf(x)]=C \cdot \frac{d}{dx}[f(x)]
+\end{equation}
+
+Sum/Difference Rule
+\begin{equation}
+\frac{d}{dx}[f(x)\pm g(x)]=\frac{d}{dx}[f(x)] \pm \frac{d}{dx}[g(x)]
+\end{equation}
+
+Power Rule
+\begin{equation}
+\frac{d}{dx}[ax^{n}]=n\cdot ax^{n-1}
+\end{equation}
+
+Product Rule
+\begin{equation}
+\frac{d}{dx}[f(x) \cdot g(x)]= f'(x)g(x)+f(x)g'(x)
+\end{equation}
+
+Quotient Rule
+\begin{equation}
+\frac{d}{dx}\biggl[ \frac{f(x)}{g(x)} \biggr]=\frac{f'(x)g(x)-f(x)g'(x)}{[g(x)]^{2}}
+\end{equation}
+
+Chain Rule
+\begin{equation}
+\frac{d}{dx}[f(g(x))]=f'(g(x)) \cdot g'(x)
+\end{equation}
+
+Exponentials
+\begin{equation}
+\frac{d}{dx}[a^{x}]=a^{x}\cdot \lnp{a}
+\end{equation}
+
+Logarithms
+\begin{equation}
+\frac{d}{dx}[\log_{a}{x}]=\frac{1}{x \cdot \lnp{a}}
+\end{equation}
+
+Generalized Power Rule
+\begin{equation}
+\frac{d}{dx}[f(x)^{g(x)}]=f(x)^{g(x)}\biggl[g'(x)\cdot\ln{f(x)}+\frac{g(x)f'(x)}{f(x)}\biggr]
+\end{equation}
+
+Inverse Functions
+\begin{equation}
+\frac{d}{dx}[f^{-1}(x)]= \frac{1}{f'(f^{-1}(x))}
+\end{equation}
+
+\newpage
+
+
+\subsection{Trigonometric Functions}
+Normal Trig Functions
+\begin{equation}
+\frac{d}{dx}[\sinp{x}]=\cosp{x}
+\end{equation}
+\begin{equation}
+\frac{d}{dx}[\cosp{x}]=-\sinp{x}
+\end{equation}
+\begin{equation}
+\frac{d}{dx}[\tanp{x}]=\sec^{2}\left( x \right)
+\end{equation}
+\begin{equation}
+\frac{d}{dx}[\cscp{x} ]= -\cscp{x} \cotp{x}
+\end{equation}
+\begin{equation}
+\frac{d}{dx}[\secp{x} ]= \secp{x} \tanp{x}
+\end{equation}
+\begin{equation}
+\frac{d}{dx}[\cotp{x} ]= -\csc^{2}\left( x \right)
+\end{equation}\\
+\bigskip 
+
+
+Inverse Trig Functions
+\begin{equation}
+\frac{d}{dx}[\arcsin{x}]=\frac{1}{\sqrt{1-x^{2}}}
+\end{equation}
+\begin{equation}
+\frac{d}{dx}[\arccos{x}]=\frac{-1}{\sqrt{1-x^{2}}}
+\end{equation}
+\begin{equation}
+\frac{d}{dx}[\arctan{x}]=\frac{1}{1+x^{2}}
+\end{equation}
+\begin{equation}
+\frac{d}{dx}[\arccsc{x}]=\frac{-1}{ \mid x \mid \sqrt{x^{2}-1}}
+\end{equation}
+\begin{equation}
+\frac{d}{dx}[\arcsec{x}]=\frac{1}{ \mid x \mid \sqrt{x^{2}-1}}
+\end{equation}
+\begin{equation}
+\frac{d}{dx}[\arccot{x}]=\frac{-1}{1+x^{2}}
+\end{equation}
+
+\newpage
+
+\subsection{Hyperbolic Functions}
+
+Normal Hyperbolic Functions
+\begin{equation}
+\frac{d}{dx}[\sinh{x}]=\cosh{x}
+\end{equation}
+\begin{equation}
+\frac{d}{dx}[\cosh{x}]=\sinh{x}
+\end{equation}
+\begin{equation}
+\frac{d}{dx}[\tanh{x}]=\sech^{2}x
+\end{equation}
+\begin{equation}
+\frac{d}{dx}[\csch{x}]=-\csch{x} \coth{x}
+\end{equation}
+\begin{equation}
+\frac{d}{dx}[\sech{x}]=-\sech{x} \tanh{x}
+\end{equation}
+\begin{equation}
+\frac{d}{dx}[\coth{x}]=-\csch^{2}x
+\end{equation}\\
+\bigskip 
+
+Inverse Hyperbolic Functions
+\begin{equation}
+\frac{d}{dx}[\arcsinh{x}]=\frac{1}{\sqrt{1+x^{2}}}
+\end{equation}
+\begin{equation}
+\frac{d}{dx}[\arccosh{x}]=\frac{1}{\sqrt{1-x^{2}}}
+\end{equation}
+\begin{equation}
+\frac{d}{dx}[\arctanh{x}]=\frac{1}{1-x^{2}}
+\end{equation}
+\begin{equation}
+\frac{d}{dx}[\arccsch{x}]=\frac{-1}{ x  \sqrt{1-x^{2}}}
+\end{equation}
+\begin{equation}
+\frac{d}{dx}[\arcsech{x}]=\frac{-1}{ x \sqrt{1-x^{2}}}
+\end{equation}
+\begin{equation}
+\frac{d}{dx}[\arccoth{x}]=\frac{1}{1-x^{2}}
+\end{equation}
+\newpage
+
+\section{Integrals}
+\subsection{Techniques of Integration}
+
+U-Substitution
+\begin{equation}
+\int f(g(x))g'(x) dx = F(g(x))+C
+\end{equation}
+
+Integration by Parts
+\begin{equation}
+\int u\; dv = uv - \int v\; du
+\end{equation}
+
+Trig. Integrals
+\begin{equation}
+\int \sin^{m}{x}\; \cos^{n}{x}\; dx
+\end{equation}
+
+
+\hangindent=3.5em
+\hangafter=1
+\underline{Case 1:} If power of sin is odd, keep one factor of sin and use the Pythagorean Identity to change $\sin^{2}{x}\rightarrow 1-\cos^{2}{x}$. If power of cos is odd, keep one factor of cos and use the Pythagorean Identity to change $\cos^{2}{x}\rightarrow 1-\sin^{2}{x}$. If both are odd, pick one that will get you to a power of 2 (if possible).\\
+\medskip 
+
+\hangindent=3.5em
+\hangafter=1
+\underline{Case 2:} If both powers are even, use half angle formulas: $\sin^{2}{x}=\frac{1}{2}(1-\cos{2x})$ or $\cos^{2}{x}=\frac{1}{2}(1+\cos{2x})$.
+
+\begin{equation}
+\int \tan^{m}{x}\; \sec^{n}{x}\; dx
+\end{equation}
+
+\hangindent=3.5em
+\hangafter=1
+\underline{Case 1:} If power of tan is odd, keep one factor of $\sec{x}\tan{x}$ and use the Pythagorean Identity to change $\tan^{2}{x}\rightarrow \sec^{2}{x}-1$. 
+\medskip 
+
+\hangindent=3.5em
+\hangafter=1
+\underline{Case 2:} If power of sec is even, keep one factor of $\sec^{2}$ and use $\sec^{2}{x} = \tan^{2}{x}+1$.
+
+\begin{equation}
+\int \cot^{m}{x}\; \csc^{n}{x}\; dx
+\end{equation}
+
+\hangindent=3.5em
+\hangafter=1
+\underline{Case 1:} If power of cot is odd, keep one factor of $\csc{x}\cot{x}$ and use the Pythagorean Identity to change $\cot^{2}{x}\rightarrow \csc^{2}{x}-1$. 
+\medskip 
+
+\hangindent=3.5em
+\hangafter=1
+\underline{Case 2:} If power of csc is even, keep one factor of $\csc^{2}$ and use $\csc^{2}{x} = \cot^{2}{x}+1$.
+\bigskip
+
+Trig. Substitutions
+\begin{center}
+\begin{tabular}{cccc}
+
+$\sqrt{a^{2}-x^{2}}$ \smallskip & $x=a\sin{\theta}$ \smallskip & $dx=a\cos{\theta}d\theta$ \smallskip & $\sqrt{a^{2}-x^{2}}=a\cos{\theta}$ \smallskip \\
+$\sqrt{a^{2}+x^{2}}$ \smallskip & $x=a\tan{\theta}$ \smallskip & $dx=a\sec^{2}{\theta}d\theta$ \smallskip & $\sqrt{a^{2}+x^{2}}=a\sec{\theta}$ \smallskip \\
+$\sqrt{x^{2}-a^{2}}$ & $x=a\sec{\theta}$ & $dx=a\sec{\theta}\tan{\theta}d\theta$ & $\sqrt{x^{2}-a^{2}}=a\tan{\theta}$\\
+
+\end{tabular}
+\end{center}
+
+Integrating Inverse Functions
+\begin{equation}
+\int f^{-1}(x) dx = xf^{-1}(x)-(F\circ f^{-1})(x)+C
+\end{equation}
+
+Partial Fractions
+
+\newpage
+
+\section{Series}
+\subsection{Types of Series}
+Geometric Series
+\begin{equation}
+\sum_{n=1}^{\infty}ar^{n-1}\;  \textrm{or} \; \sum_{n=0}^{\infty}ar^{n}
+\end{equation}
+
+\begin{center}
+Converges when $-1<r<1$
+\end{center}
+\begin{equation}
+\sum_{n=1}^{\infty}ar^{n-1}= \frac{a}{1-r}
+\end{equation}
+
+Harmonic Series
+\begin{equation}
+\sum_{n=1}^{\infty}\frac{1}{n}=1+\frac{1}{2}+\frac{1}{3}+\frac{1}{4}. . .
+\end{equation}
+\begin{center}
+Diverges
+\end{center}
+
+P-Series
+\begin{equation}
+\sum_{n=1}^{\infty}\frac{1}{n^{p}}=1+\frac{1}{2^{p}}+\frac{1}{3^{p}}+\frac{1}{4^{p}}. . .
+\end{equation}
+\begin{center}
+Converges when $p>1$\\
+Diverges when $p\leq1$
+\end{center}
+
+Telescoping Series
+\begin{equation}
+\sum_{n=1}^{\infty}(a_{n}-a_{n-1})=a_{\infty}-a_{0}
+\end{equation}
+
+\subsection{Testing for Convergence}
+Limit Test
+\begin{equation}
+\textrm{If} \lim_{n\rightarrow \infty}a_{n}\neq0, \textrm{then}\sum a_{n}\ \textrm{diverges}
+\end{equation}
+
+Type of Series
+\begin{itemize}
+\item Geometric: converges if $\mid r \mid <1$
+\item Telescoping: find lim of $a_{\infty}-a_{0}$
+\item P-Series: converges when $p>1$
+\end{itemize}
+
+Integral Test
+\begin{equation}
+\textrm{If} \int_{1}^{\infty}a(n)\;dn\ \textrm{converges, then}\sum a_{n} \textrm{converges}
+\end{equation}
+\begin{equation}
+\textrm{If} \int_{1}^{\infty}a(n)\;dn\ \textrm{diverges, then}\sum a_{n} \textrm{diverges}
+\end{equation}
+\end{flushleft}
+\newpage
+
+Comparison Test\\
+\hangindent=2cm If all terms of $a_{n}$ are positive and it acts like another series $b_{n}$.
+\begin{equation}
+\textrm{If}\ a_{n}\leq b_{n}\ \textrm{and} \sum b_{n}\ \textrm{converges, then} \sum a_{n} \textrm{converges}
+\end{equation}
+\begin{equation}
+\textrm{If}\ a_{n}\geq b_{n}\ \textrm{and} \sum b_{n}\ \textrm{diverges, then} \sum a_{n} \textrm{diverges}
+\end{equation}
+\begin{equation}
+\textrm{If}\ \lim_{n\rightarrow\infty} \frac{a_{n}}{b_{n}}\ \textrm{exists, then both series converge or diverge}
+\end{equation}
+
+Absolute Convergence\\
+\hangindent=2cm For $\sum (-1)^{n}a_{n}$ or $\sum (-1)^{n-1}a_{n}$
+\begin{equation}
+\textrm{If}\ \sum \vert a_{n} \vert \ \textrm{converges, then} \sum a_{n} \textrm{is absolutely convergent.}
+\end{equation}
+\begin{equation}
+\textrm{If} \lim_{n\rightarrow \infty}a_{n}=0,\ \textrm{then}\sum (-1)^{n}a_{n}\ \textrm{converges}
+\end{equation}
+\begin{equation}
+\textrm{If}\ a_{n+1}\leq a_{n}\ \textrm{or}\ f'(x)<0\ \textrm{then} \sum (-1)^{n}a_{n} \textrm{converges}
+\end{equation}
+
+Ratio Test\\
+\hangindent=2cm use for factorials or "n"th powers
+\begin{equation}
+\textrm{If} \lim_{n\rightarrow \infty} \left\vert \frac{a_{n+1}}{a_{n}} \right\vert<1 , \textrm{then}\sum a_{n}\ \textrm{is absolutely convergent.}
+\end{equation}
+\begin{equation}
+\textrm{If} \lim_{n\rightarrow \infty} \left\vert \frac{a_{n+1}}{a_{n}} \right\vert>1 , \textrm{then}\sum a_{n}\ \textrm{is divergent.}
+\end{equation}
+\begin{equation}
+\textrm{If} \lim_{n\rightarrow \infty} \left\vert \frac{a_{n+1}}{a_{n}} \right\vert=1 , \textrm{then}\sum a_{n}\ \textrm{is inconclusive.}
+\end{equation}
+
+Root Test\\
+\hangindent=2cm use for "n"th powers
+\begin{equation}
+\textrm{If} \lim_{n\rightarrow \infty} \sqrt[n]{\vert a_{n} \vert} <1 , \textrm{then}\sum a_{n}\ \textrm{is absolutely convergent.}
+\end{equation}
+\begin{equation}
+\textrm{If} \lim_{n\rightarrow \infty} \sqrt[n]{\vert a_{n}\vert } >1 , \textrm{then}\sum a_{n}\ \textrm{is divergent.}
+\end{equation}
+\begin{equation}
+\textrm{If} \lim_{n\rightarrow \infty} \sqrt[n]{\mid a_{n} \mid } =1 , \textrm{then}\sum a_{n}\ \textrm{is inconclusive.}
+\end{equation}
+\newpage
+
+\subsection{Power Series}
+Power Series- a series with some variable "x" raised to some power
+\begin{equation}
+\sum_{n=0}^{\infty}a_{n}(x-c)^{n}= a_{0}+a_{1}(x-c)+a_{2}(x-c)^{2}
+\end{equation}
+\begin{center}
+P-series centered at c\\
+Creates a function of x
+\end{center}
+\bigskip
+
+Convergence of a Power Series
+\begin{itemize}
+\item at x=c, Domain: [c,c]
+\item for all x, Domain: $(-\infty,\infty)$
+\item for some $\mid x-c \mid < R$, Domain (c-R, c+R)
+\end{itemize}
+\begin{center}
+need to check endpoints
+\end{center}
+
+\subsection{Taylor Series}
+Taylor Series
+\begin{equation}
+f(x)=\sum_{n=0}^{\infty}\frac{f^{n}(c)}{n!}(x-c)^{n}
+\end{equation}
+\begin{equation}
+=f(c)+f'(c)(x-c)+\frac{f''(c)}{2!}(x-c)^{2}
+\end{equation}
+
+\begin{flushleft}
+Maclaurin Series- \begin{small} Taylor Series at c=0 \end{small}
+\begin{equation}
+f(x)=\sum_{n=0}^{\infty}\frac{f^{n}(0)}{n!}(x)^{n}
+\end{equation}
+\end{flushleft}
+\newpage
+
+\subsection{List of Common Taylor Series}
+
+
+\begin{equation}
+\frac{1}{1-x}=1+x+x^{2}+x^{3}+...=\sum_{n=0}^{\infty}x^{n}\ \ \ \ \ \ (1,1)
+\end{equation}
+\begin{equation}
+\frac{1}{(1-x)^{2}}=1+2x+3x^{2}+4x^{3}+...=\sum_{n=0}^{\infty}nx^{n-1}\ \ \ \ \ \ (1,1)
+\end{equation}
+\begin{equation}
+\lnp{1+x}=x-\frac{x^{2}}{2}+\frac{x^{3}}{3}-\frac{x^{4}}{4}...=\sum_{n=0}^{\infty}\frac{(-1)^{n}}{n+1}x^{n+1}\ \ \ \ \ \ (1,1)
+\end{equation}
+\begin{equation}
+\tan^{-1}{x}=x-\frac{x^{3}}{3}+\frac{x^{5}}{5}-\frac{x^{7}}{7}...=\sum_{n=0}^{\infty}\frac{(-1)^{n}}{2n+1}x^{2n+1}\ \ \ \ \ \ (1,1)
+\end{equation}
+\begin{equation}
+\tanh^{-1}{x}=x+\frac{x^{3}}{3}+\frac{x^{5}}{5}+\frac{x^{7}}{7}...=\sum_{n=0}^{\infty}\frac{x^{2n+1}}{2n+1}\ \ \ \ \ \ (1,1)
+\end{equation}
+\begin{equation}
+e^{x}=1+x+\frac{x^{2}}{2!}+\frac{x^{3}}{3!}...=\sum_{n=0}^{\infty}\frac{x^{n}}{n!}\ \ \ \ \ \ (-\infty,\infty)
+\end{equation}
+\begin{equation}
+\sinh{x}=x+\frac{x^{3}}{3!}+\frac{x^{5}}{5!}+\frac{x^{7}}{7!}...=\sum_{n=0}^{\infty}\frac{x^{2n+1}}{2n+1!}\ \ \ \ \ \ (-\infty,\infty)
+\end{equation}
+\begin{equation}
+\cosh{x}=1+\frac{x^{2}}{2!}+\frac{x^{4}}{4!}+\frac{x^{6}}{6!}...=\sum_{n=0}^{\infty}\frac{x^{2n}}{2n!}\ \ \ \ \ \ (-\infty,\infty)
+\end{equation}
+\begin{equation}
+\sin{x}=x-\frac{x^{3}}{3!}+\frac{x^{5}}{5!}-\frac{x^{7}}{7!}...=\sum_{n=0}^{\infty}\frac{(-1)^{n}}{2n+1!}x^{2n+1}\ \ \ \ \ \ (-\infty,\infty)
+\end{equation}
+\begin{equation}
+\cos{x}=1-\frac{x^{2}}{2!}+\frac{x^{4}}{4!}-\frac{x^{6}}{6!}...=\sum_{n=0}^{\infty}\frac{(-1)^{n}}{2n!}x^{2n}\ \ \ \ \ \ (-\infty,\infty)
+\end{equation}
+\begin{equation}
+W(x)=x-x^{2}+\frac{3x^{3}}{2}-\frac{8x^{4}}{3}...=\sum_{n=1}^{\infty}\frac{(-n)^{n-1}}{n!}x^{n}\ \ \ \ \ \ \left(-\frac{1}{e},\frac{1}{e}\right)
+\end{equation}
+
+
+\newpage
+
+\section{Vectors}
+\subsection{Basic Properties}
+\begin{flushleft}
+A vector $\vec{v}$ with an initial point at the origin and an terminal point P $(v_{1},v_{2})$ is called an position vector and is denoted $\vecp{v_{1},v_{2}}$.\\
+\bigskip
+
+Magnitude
+\begin{equation}
+\magp{\vec{v}}=\sqrt{v_{1}^{2}+v_{2}^{2} + \dots}
+\end{equation}
+
+Basic Properties
+\begin{equation}
+\vec{a}+\vec{b}= \vecp{a_{1}+b_{1}, a_{2}+b_{2}, \dots}
+\end{equation}
+\begin{equation}
+C \cdot \vec{v} = \vecp{C \cdot v_{1}, C \cdot v_{2, \dots}}
+\end{equation}
+
+Unit Vector
+\begin{equation}
+\hat{u}=\frac{\vec{v}}{\magp{\vec{v}}}
+\end{equation}
+
+Standard Basis Vectors
+\begin{equation}
+\hat{i}=\vecp{1, 0, 0}
+\end{equation}
+\begin{equation}
+\hat{j}=\vecp{0, 1, 0}
+\end{equation}
+\begin{equation}
+\hat{k}=\vecp{0, 0, 1}
+\end{equation}
+
+
+\subsection{Dot Product}
+Adds the products of corresponding components of two vectors. Gives a scalar.
+\begin{equation}
+\vec{a} \cdot \vec{b}= a_{1}b_{1}+a_{2}b_{2}+a_{3}b_{3}+\dots= C
+\end{equation} 
+
+Properties
+\begin{equation}
+\vec{v} \cdot \vec{w} = \vec{w} \cdot \vec{v} 
+\end{equation}
+\begin{equation}
+\vec{v} \cdot (\vec{u} + \vec{w}) = \vec{v} \cdot \vec{u} +\vec{v} \cdot \vec{w}
+\end{equation}
+\begin{equation}
+(C\vec{v}) \cdot \vec{w} = C(\vec{w} \cdot \vec{v})=  \vec{v} \cdot (C\vec{w})
+\end{equation}
+\begin{equation}
+\vec{0} \cdot \vec{v}= 0
+\end{equation}
+\begin{equation}
+\vec{v} \cdot \vec{v} = \magp{\vec{v}}^{2}
+\end{equation}
+
+
+Another Definition ($\theta$ is the angle between the vectors)
+\begin{equation}
+\vec{v} \cdot \vec{w} = \magp{\vec{v}} \magp{\vec{w}} \cos{\theta}
+\end{equation}
+\begin{equation}
+\cos{\theta }= \frac{\vec{v} \cdot \vec{w}}{\magp{\vec{v}} \magp{\vec{w}}}
+\end{equation}
+\begin{equation}
+\theta= \arccos{\frac{\vec{v} \cdot \vec{w}}{\magp{\vec{v}} \magp{\vec{w}}}}
+\end{equation}
+If $\theta=0$ or $\pi$, the vectors are parallel.\\ 
+If $\theta=\frac{\pi}{2}$, the vectors are orthogonal.
+
+
+
+\newpage
+
+\subsection{Cross Product}
+\begin{equation}
+\vec{a} \times \vec{b}=
+\begin{bmatrix}
+\hat{i} & \hat{j} & \hat{k} \\
+a_{1} & a_{2} & a_{3} \\
+b_{1} & b_{2} & b_{3} \\
+\end{bmatrix} 
+=\begin{bmatrix}
+a_{2} & a_{3} \\
+b_{2} & b_{3} \\
+\end{bmatrix} \hat{i} -
+\begin{bmatrix}
+a_{1} & a_{3} \\
+b_{1} & b_{3} \\
+\end{bmatrix}\hat{j}+
+\begin{bmatrix}
+a_{1} & a_{2} \\
+b_{1} & b_{2} \\
+\end{bmatrix} \hat{k}
+\end{equation}
+
+Properties\\
+\bigskip
+1. $\vec{a} \times \vec{b}$ is a vector.\\
+2. $\vec{a} \times \vec{b}$ is orthogonal to both $\vec{a}$ and $\vec{b}$.\\
+3. $\vec{b} \times \vec{a}$ is orthogonal to both $\vec{a}$ and $\vec{b}$ but other direction.\\
+4. $\vec{a} \times \vec{b} = -(\vec{b} \times \vec{a})$\\
+
+Another Definition
+\begin{equation}
+\magp{\vec{a} \times \vec{b}}= \magp{\vec{a}} \magp{\vec{b}} \sin{\theta}
+\end{equation}
+
+Area of a Triangle with Sides $\vec{u}$ and $\vec{v}$.
+\begin{equation}
+A_{t}=\frac{1}{2} \magp{\vec{u} \times \vec{v}}
+\end{equation}
+
+Area of a Parallelogram with Sides $\vec{u}$ and $\vec{v}$.
+\begin{equation}
+A_{p}=\magp{\vec{u} \times \vec{v}}
+\end{equation}
+
+Volume of a Parallelepypite with Sides $\vec{a}$, $\vec{b}$, and $\vec{c}$.
+\begin{equation}
+V_{p}=\absp{\vec{a} \cdot (\vec{b} \times \vec{c})}
+\end{equation}
+\newpage
+
+\section{Vector Functions}
+\subsection{Basics and Properties}
+Sketches a line through space with vectors starting at the origin.
+\begin{equation}
+\vec{r}(t)= f(t)\hat{i}+g(t)\hat{j}+h(t)\hat{k}
+\end{equation}
+Properties
+\begin{equation}
+\lim_{t \rightarrow a}\vec{r}(t)= \lim_{t \rightarrow a}f(t)\hat{i}+\lim_{t \rightarrow a}g(t)\hat{j}+\lim_{t \rightarrow a}h(t)\hat{k}
+\end{equation}
+\begin{equation}
+\frac{d}{dt}\vec{r}(t)= f'(t)\hat{i}+g'(t)\hat{j}+h'(t)\hat{k}
+\end{equation}
+\begin{equation}
+\int\vec{r}(t)= F(t)\hat{i}+G(t)\hat{j}+H(t)\hat{k}+C
+\end{equation}
+
+Projectile Motion
+\begin{equation}
+\vec{r}(t)= (\vec{v}_{0}\cos{\alpha})t\hat{i}+[h+(\vec{v}_{0}\sin{\alpha})t-\frac{1}{2}gt^{2}]\hat{j}
+\end{equation}
+$$ \vec{v}_{0}= \textrm{initial velocity}$$
+$$ \alpha= \textrm{angle of inclination}$$
+$$ h = \textrm{height above plane}$$
+$$ g = \textrm{acceleration of gravity}$$
+
+
+
+
+\subsection{Arc Length}
+\begin{equation}
+L= \int_{a}^{b}\sqrt{[f'(t)]^{2}+[g'(t)]^{2}+[h'(t)]^{2}} dt
+\end{equation}
+\begin{equation}
+L= \int_{a}^{b}\magp{\vec{r}'(t)} dt
+\end{equation}
+
+Reparameterizing by Arc Length
+\end{flushleft}
+\begin{equation}
+\textrm{Find} \ \  S(t)=\int \magp{\vec{r}'(t)} dt
+\end{equation}
+\begin{equation}
+\textrm{Solve for t in terms of S} \ \ t=u(S)
+\end{equation}
+\begin{center}
+Substitute back into vector function
+\end{center}
+\begin{equation}
+\vec{r}(t)= f(u(S))\hat{i}+g(u(S))\hat{j}+h(t)\hat{u(S)}
+\end{equation}
+\newpage
+
+\begin{flushleft}
+\subsection{TNB Frames}
+Frenet-Serret Frames\\
+\bigskip
+$\vec{T}$angent: Direction particle is heading.\\
+$\vec{N}$ormal: Direction particle is turning.\\
+$\vec{B}$inormal: Direction particle is twisting.\\
+\bigskip
+
+How to find TNB
+\begin{equation}
+\vec{T}(t)=\frac{\vec{r}'(t)}{\magp{\vec{r}'(t)}}
+\end{equation}
+\begin{equation}
+\vec{N}(t)=\frac{\vec{T}'(t)}{\magp{\vec{T}'(t)}}
+\end{equation}
+\begin{equation}
+\vec{B}(t)=\vec{T}(t) \times \vec{N}(t)
+\end{equation}
+
+\subsection{Curvature, Torsion, and Osculating Circles}
+Curvature: "failure to be a line"
+\begin{equation}
+\kappa = \frac{\textrm{change in tangent vector}}{\textrm{arc length}}= \magp{\vec{T}'(S)}
+\end{equation}
+\begin{equation}
+\kappa = \frac{\magp{\vec{T}'(t)}}{\magp{\vec{r}'(t)}}
+\end{equation}
+\begin{equation}
+\kappa = \frac{\magp{\vec{r}'(t) \times \vec{r}''(t)}}{\magp{\vec{r}'(t)}^{3}} \ \ \textrm{"only for polynomials"}
+\end{equation}
+
+Torsion: "failure to be contained in a plane"
+
+\begin{equation}
+\tau = \frac{(\vec{r}' \times \vec{r}'') \cdot \vec{r}'''}{\magp{\vec{r}' \times \vec{r}''}^{2}}
+\end{equation}
+\begin{equation}
+\tau =\frac{-d\vec{B}}{ds} \cdot \vec{N} 
+\end{equation}
+
+At one point on a curve, there will be a circle that fits the curve "best" called a osculating circle with a radius of curvature \begin{equation}\rho= \frac{1}{\kappa} \end{equation} The plane that contains $\vec{N}$ and $\vec{B}$ at the point is called the normal plane and contains all vectors orthogonal to $\vec{T}$.
+\newpage
+
+\section{Multivariable Functions}
+\subsection{Lines and Planes}
+Lines need a point $(x_{0},\ y_{0},\ z_{0})$ and direction vector $\vecp{a,\ b,\ c}$.\\
+\bigskip
+
+Parametric Equation for a Line
+\begin{equation}
+x=at+x_{0},\ \ \ y=bt+y_{0},\ \ \ z=ct+z_{0}
+\end{equation}
+
+Symmetric Equation of a Line
+\begin{equation}
+\frac{x-x_{0}}{a}=\frac{y-y_{0}}{b}=\frac{z-z_{0}}{c}
+\end{equation}
+
+\bigskip
+\bigskip
+
+
+Planes need a point $P_{0}(x_{0},\ y_{0},\ z_{0})$ and normal vector $\vec{n}=\vecp{a,\ b,\ c}$.\\
+\bigskip
+
+Standard Form of a Plane
+\begin{equation}
+a(x-x_{0})+b(y-y_{0})+c(z-z_{0})=0
+\end{equation}
+General Form
+\begin{equation}
+ax+by+cz=d
+\end{equation}
+
+Angle Between Line and Plane
+\begin{equation}
+90^{\circ}-\arccos{\frac{\absp{\vec{n} \cdot \vec{v}}}{\magp{\vec{n}} \magp{\vec{v}}}}
+\end{equation}
+
+\subsection{Distances}
+Point $P_{T}(x_{T},\ y_{T},\ z_{T})$ and a Plane $P_{0}(x_{0},\ y_{0},\ z_{0})\ \ \vec{n}=\vecp{a,\ b,\ c}$.
+\begin{equation}
+D=\left\vert \frac{ax_{T}+by_{T}+cz_{T}+d}{\sqrt{a^{2}+b^{2}+c^{2}}}  \right\vert
+\end{equation}
+
+Parallel Planes
+\begin{equation}
+D= \frac{\absp{d_{1}-d_{2}}}{\sqrt{a^{2}+b^{2}+c^{2}}}  
+\end{equation}
+
+Point P and Line Q and $\vec{v}$
+\begin{equation}
+D=\frac{\magp{\vec{PQ} \times \vec{v}}}{\magp{\vec{v}}}
+\end{equation}
+
+Between Skewed Lines\\
+\bigskip
+Find direction vectors $\vec{v}_{1}$ and $\vec{v}_{2}$. Find common normal $\vec{n}=\vec{v}_{1} \times \vec{v}_{2}$. Pick a point on each line $P_{1}$ and $P_{2}$. Take $P_{1}$ and $\vec{n}$ and $P_{2}$ and $\vec{n}$ to make equations of planes and solve for the distance between parallel planes. 
+\newpage
+
+
+\subsection{Cylinder and Surfaces}
+Cylinder
+\begin{enumerate}
+\item Equations only have two variables.
+\item Directed along axis of missing variable.
+\item Does not change along direction axis.
+\end{enumerate}
+
+
+Surfaces
+\begin{enumerate}
+\item Has three variables.
+\item Traces occur on coordinate planes or parallel to.
+\item Shape changes along the axis.
+\end{enumerate}
+\bigskip
+
+Ellipsoid
+\begin{equation}
+\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}=1
+\end{equation}
+
+One-Sheet Hyperbolas
+\begin{equation}
+\frac{x^2}{a^2}+\frac{y^2}{b^2}-\frac{z^2}{c^2}=1
+\end{equation}
+
+Two Sheet Hyperbola 
+\begin{equation}
+\frac{x^2}{a^2}-\frac{y^2}{b^2}-\frac{z^2}{c^2}=1
+\end{equation}
+
+Cones
+\begin{equation}
+\frac{x^2}{a^2}+\frac{y^2}{b^2}-\frac{z^2}{c^2}=0
+\end{equation}
+
+Paraboloids
+\begin{equation}
+\frac{x^2}{a^2}+\frac{y^2}{b^2}=cz
+\end{equation}
+
+Hyperbolic Paraboloid 
+\begin{equation}
+\frac{x^2}{a^2}-\frac{y^2}{b^2}=cz
+\end{equation}
+
+\subsection{Limits of Multivariable Functions}
+\begin{equation}
+\lim_{(x,y)\rightarrow (a,b)}f(x,y)=L
+\end{equation}
+Problem: infinite ways to approach (a,b). \\
+To prove that L doesn't exist, its sufficient to show different values of L from different lines through (a,b).
+\newpage
+
+\section{Partial Derivatives}
+\subsection{Basics}
+\begin{equation}
+\parx{f}= \parx{z}=f_{x}=z_{x}
+\end{equation}
+Holds any other variables constant.\\
+Slope of tangent line in x-direction.
+
+\begin{equation}
+\pary{f}=\pary{z}=f_{y}=z_{y}
+\end{equation}
+Holds any other variables constant.\\
+Slope of tangent line in y-direction.\\
+\bigskip
+
+Higher Derivatives
+\begin{equation}
+\frac{\partial^2 f}{\partial x^2},\ \ \ \frac{\partial^2 f}{\partial y^2},\ \ \ \frac{\partial^2 f}{\partial x \partial y}=\frac{\partial^2 f}{\partial y \partial x}
+\end{equation}
+
+h(x,y) is called a Harmonic Function if it satisfies the Laplace Equation
+\begin{equation}
+h_{xx}+h_{yy}=0
+\end{equation}
+
+Differential
+\begin{equation}
+dz=f_{x}dx+f_{y}dy
+\end{equation}
+
+Directional Derivative $\hat{u}=\vecp{u_{1},\ u_{2}}$
+\begin{equation}
+D_{\hat{u}}f(x,y)=f_{x}u_{1}+f_{y}u_{2}
+\end{equation}
+
+\subsection{Multivariable Chain Rule}
+Suppose that "f" is a function of "x" and "y" where "x" and "y" are functions of some variable "t."
+\begin{equation}
+\frac{df}{dt}=\parx{f}\frac{dx}{dt} + \pary{f}\frac{dy}{dt}
+\end{equation}
+
+
+"w" is a function of "x," "y," and "z." "x," "y," and "z" are based of variables "u" and "v."
+\begin{equation}
+\frac{\partial w}{\partial u}= \parx{w}\frac{\partial x}{\partial u}+\pary{w}\frac{\partial y}{\partial u}+\frac{\partial w}{\partial z}\frac{\partial z}{\partial u}
+\end{equation}
+
+
+\subsection{Gradient}
+\begin{equation}
+\bigtriangledown f(x,y)= f_{x}\hat{i}+f_{y}\hat{j}
+\end{equation}
+\begin{equation}
+D_{\hat{u}}f(x,y)= \bigtriangledown f(x,y) \cdot \hat{u}
+\end{equation}
+\newpage
+
+Properties of the $\bigtriangledown$
+\begin{enumerate}
+\item If $\bigtriangledown f=\vec{0}$ then $D_{\hat{u}}f=0$ of any $\hat{u}$.
+\item $D_{\hat{u}}f(x,y)$ has its max value of $\magp{\bigtriangledown f(x,y)}$ only when $\hat{u}=C \cdot \bigtriangledown f$.
+\item $D_{\hat{u}}f(x,y)$ has its minimum value of $-\magp{\bigtriangledown f(x,y)}$ at $\theta = \pi$ from max value.
+\end{enumerate}
+
+\subsection{Local Extrema of Functions}
+Second Derivative Test
+\begin{equation}
+D(x,y)=f_{xx}f_{yy}-(f_{xy})^{2}
+\end{equation}
+\begin{enumerate}
+\item $D(a,b) > 0$\ \ $f_{xx}(a,b)>0$\ \ Concave up; relative min
+\item $D(a,b) > 0$\ \ $f_{xx}(a,b)<0$\ \ Concave down; relative max
+\item $D(a,b) < 0$ saddle/inflection point
+\item $D(a,b) = 0$ no conclusions can be drawn
+\end{enumerate}
+
+\subsection{LaGrange Multipliers}
+Idea: to find the local min/max of a surface $f(x,y)=z$ along a constraint $g(x,y)=c$.
+
+\begin{equation}
+\bigtriangledown f(x,y)= \lambda \bigtriangledown g(x,y)
+\end{equation}
+Plug $\lambda$ back into equations used to find lambda to a coordinate.\\
+Plug back into f(x,y) and do second derivative test to find out if its a max or min.
+
+
+
+
+\newpage
+\section{Multiple Integrals}
+\subsection{Double Integrals}
+Definition:
+\begin{equation}
+\lim_{m,n \rightarrow \infty }\sum_{i=1}^m \sum_{j=1}^n\ f(x_{ij}, y_{ij})\ \Delta x \Delta y\ = \iint \limits_R  f(x,y)\ dxdy 
+\end{equation}
+
+Fubini's Theorem for General Regions
+\begin{equation}
+\int \limits_a^b \int \limits_{g_1(x)}^{g_2(x)} f(x,y)\ dydx = \int \limits_c^d \int \limits_{h_1(x)}^{h_2(x)} f(x,y)\ dxdy
+\end{equation}
+
+Double Integrals in Polar Coordinates
+\begin{equation}
+\iint \limits_R  f(x,y)\ dA = \int \limits_\alpha^\beta \int \limits_{g_1(\theta)}^{g_2(\theta)} f(r\cos \theta, r\sin \theta) \cdot r\ drd\theta 
+\end{equation}
+
+\subsection{Triple Integrals}
+\begin{equation}
+\iiint \limits_T f(x,y,z)\ dV
+\end{equation}
+\begin{enumerate}
+\item For $\displaystyle \iiint \limits_T $ define T between two surfaces. This takes care of the first $\displaystyle \int$ and leaves $\iint \limits_R$ just like before. But, R can be on XY, YZ, or XZ planes.\\
+\indb \underline{ Two Tasks and Two Regions}
+\begin{enumerate}
+ \item A area in $\mathbb{R}-3$
+ \item Then a very specific $\mathbb{R}-2$ region on the coordinate plane.
+\end{enumerate}
+\item $\displaystyle \iiint \limits_T f(x,y,z) dV$ can be evaluated in any order.
+\item x/y/z Simple\\
+\begin{itemize}
+\item \underline{z-simple}: Define $\mathbb{R}-3$ region between two $z=f(x,y)$ functions, R will be in the xy-plane. 
+\item \underline{y-simple}: Define $\mathbb{R}-3$ region between two $z=f(x,z)$ functions, R will be in the xz-plane. 
+\item \underline{x-simple}: Define $\mathbb{R}-3$ region between two $z=f(y,z)$ functions, R will be in the yz-plane. 
+\end{itemize}
+\end{enumerate}
+\newpage
+\subsection{C.O.M and Moments of Inertia}
+If an object has a density of $\rho (x,y,z) $ at any point $(x,y,z)$ then the mass of the plate is:
+\begin{equation}
+m=\iiint \limits_T \rho (x,y,z)\ dV
+\end{equation}
+
+\noindent \underline{First Moments of Mass}:
+
+\begin{equation}
+M_{yz} = \iiint \limits_T  x\rho (x,y,z)\ dV, \ \ \ \ \ \bar{x}=\frac{M_{yz}}{m}
+\end{equation}
+\begin{equation}
+M_{xz} = \iiint \limits_T  y\rho (x,y,z)\ dV, \ \ \ \ \ \bar{y}=\frac{M_{xz}}{m}
+\end{equation}
+\begin{equation}
+M_{xy} = \iiint \limits_T  z\rho (x,y,z)\ dV, \ \ \ \ \ \bar{z}=\frac{M_{xy}}{m}
+\end{equation}
+
+\begin{equation}
+\textrm{C.O.M}\ \ (\bar{x},\ \bar{y},\ \bar{z})
+\end{equation}
+
+\noindent \underline{Second Moments of Inertia}:
+
+\begin{equation}
+I_x = \iiint \limits_T  (y^2+z^2)\rho (x,y,z)\ dV
+\end{equation}
+\begin{equation}
+I_y = \iiint \limits_T  (x^2+z^2)\rho (x,y,z)\ dV
+\end{equation}
+\begin{equation}
+I_z = \iiint \limits_T  (x^2+y^2)\rho (x,y,z)\ dV
+\end{equation}
+
+\noindent \underline{Radius of Gyration}:
+\begin{equation}
+k_x = \sqrt{\frac{I_x}{m}}
+\end{equation}
+\begin{equation}
+k_y = \sqrt{\frac{I_y}{m}}
+\end{equation}
+\begin{equation}
+k_z = \sqrt{\frac{I_z}{m}}
+\end{equation}
+
+
+\newpage
+\subsection{Cylindrical and Spherical Coordinates}
+
+
+\inda \underline{Cylindrical:} $\ \ x=r\cos\theta \ \ y=r\sin\theta \ \ x^2+y^2=r^2 \ \ z=z $
+\begin{equation}
+\iiint \limits_T  f(x,y,z)\ dV = \int \limits_{\theta_1}^{\theta_2} \int \limits_{r_1}^{r_2} \int \limits_{z_1}^{z_2} f(r\cos\theta,r\sin\theta, z)\ dz rdrd\theta
+\end{equation}
+
+\inda \underline{Spherical:}
+$$ x=\rho\sin\phi\cos\theta$$
+$$ y=\rho\sin\phi\sin\theta$$
+$$ z=\rho\cos\phi$$
+$$ r=\rho\sin\phi$$
+$$ x^2+y^2+z^2=\rho^2$$
+\begin{equation}
+\iiint \limits_T  f(x,y,z)\ dV = \int \limits_{\theta_1}^{\theta_2} \int \limits_{\phi_1}^{\phi_2} \int \limits_{\rho1}^{\rho_2} f(\rho\sin\phi\cos\theta,\rho\sin\phi\sin\theta, \rho\cos\phi)\ \rho^2\sin\phi\ d\rho d\phi d\theta
+\end{equation}
+
+
+\subsection{The Jacobian}
+For
+\begin{equation}
+\iint \limits_R f(x,y)\ dA \Rightarrow \iint f(g(u,v),h(u,v)) \cdot J \cdot dudv
+\end{equation}
+J the Jacobian:
+\setlength{\delimitershortfall}{0pt}
+\begin{equation}
+J=\frac{\partial (x,y)}{\partial(u,v)}=\begin{vmatrix}
+\frac{\partial x}{\partial u} & \frac{\partial x}{\partial v} \\[2ex]
+\frac{\partial y}{\partial u} & \frac{\partial y}{\partial v} 
+\end{vmatrix}
+\end{equation}
+Generalizes to
+\begin{equation}
+\begin{vmatrix}
+\frac{\partial x}{\partial u} & \frac{\partial x}{\partial v} & \frac{\partial x}{\partial w} & \hdots \\[2ex]
+\frac{\partial y}{\partial u} & \frac{\partial y}{\partial v} & \frac{\partial y}{\partial w} & \hdots \\[2ex]
+\frac{\partial z}{\partial u} & \frac{\partial z}{\partial v} & \frac{\partial z}{\partial w} & \hdots \\[2ex]
+\vdots & \vdots &\vdots & \ddots
+\end{vmatrix}
+\end{equation}
+
+\newpage
+\section{Vector Calculus}
+\subsection{Vector Fields}
+\underline{Vector Field}: an object which gives a vector for each coordinate point
+\begin{equation}
+F(x,y,z)= P\hat{i} + Q\hat{j} + R\hat{k}
+\end{equation}
+\indn For which $P,$ $Q,$ and $R$ are defined functions.
+\bigskip
+
+
+ \underline{Conservative Vector Field}:\\
+\indd $F(x,y,z)$ is conservative V.F. if $F(x,y,z) = \bigtriangledown f(x,y,z)$\\
+\indf For some $f(x,y,z)$ called a potential function.
+
+\subsection{Divergence and Curl}
+Divergence and curl are two characteristics of how flow is behaving on a vector field in a small neighborhood aroud a given point ``$P$."
+
+\bigskip
+\noindent \underline{Divergence}- a measurement of how much fluid enters the neighborhood around ``$P$" compared to how much leaves. \\
+
+\begin{itemize}
+\item If more fluid enters region than leaves, then the divergence will be negative. Think of this as fluid gathering at a  point. 
+\item If the same amount of fluid/flow enters as leave, divergence is ``0'' at ``P'' called incompressible.
+\item If more fluid/flow leaves than enters, divergence is positive at ``P.'' Think of fluid leaving the point called divergent.
+\end{itemize}
+
+For $F(x,y,z) = P\hat{i} + Q\hat{j} + R\hat{k}, \ \ \ \ \bigtriangledown = \parx{}\hat{i} + \pary{}\hat{j} + \parz{}\hat{k}$
+\begin{equation}
+\vdiv F = \bigtriangledown \cdot F = \parx{P} + \pary{Q} + \parz{R}
+\end{equation}
+
+\noindent \underline{Curl}- measure of rotation of the vector field in the neighborhood around ``P''
+
+\begin{itemize}
+\item If curl is positive at a point, the fluid is spinning counter-clockwise.
+\item If curl is negative at a point, the fluid is spinning clockwise.
+\item If curl is 0, there is no rotation a ``P,'' called irrotational.
+\end{itemize}
+
+\begin{equation}
+\vcurl F = \bigtriangledown \times F = \begin{vmatrix}
+\hat{i} & \hat{j} & \hat{k} \\
+\parx{} & \pary{} & \parz{} \\
+P & Q & R
+\end{vmatrix}
+\end{equation}
+\begin{equation}
+= \left( \pary{R} - \parz{Q} \right)\hat{i} - \left( \parx{R} - \parz{P} \right)\hat{j} + \left( \parx{Q} - \pary{P} \right)\hat{k}
+\end{equation}
+
+\newpage
+\subsection{Line Integrals}
+Integrating over any curve instead of just the x axes.
+
+\begin{equation}
+m = \int \limits_c f(x,y)\ ds
+\end{equation}
+To define ``c'' use parametric equations\\
+``ds'' means with respect to arc length, little length of the curve\\
+$f(x,y)$ height above each point on ``c''\\
+$f(x,y) \cdot ds $ = Area
+
+$$
+m = \int \limits_c 2\ \textrm{var.} \rightarrow \int \limits_c 1\ \textrm{var.}
+$$
+$$
+f(x,y) = f(x(t),y(t))
+$$
+$$
+ds = \sqrt{[x'(t)]^2 + [y'(t)]^2}\ dt
+$$
+$$
+c = \vec{r}(t) = x(t)\hat{i} + y(t)\hat{j}
+$$
+$$
+\vec{r}'(t) = x'(t)\hat{i} + y'(t)\hat{j}
+$$
+$$
+\magp{\vec{r}'(t)} = \sqrt{[x'(t)]^2 + [y'(t)]^2}
+$$
+\begin{equation}
+ds = \magp{\vec{r}'(t)}\ dt
+\end{equation}
+\begin{equation}
+\int \limits_c f(x,y)\ ds = \int \limits_{t=a}^{t=b} f(x(t),y(t)) \ \magp{\vec{r}'(t)}\ dt
+\end{equation}
+
+\underline{Other possibilities}
+\begin{enumerate} 
+\item Instead of $\int ds$ you get \begin{equation}
+\int dx + dy + dz
+\end{equation}
+Substitute $\frac{dx}{dt}$ from c into the integral as $dx = x'(t)\ dt $.
+\item If ``c'' isn't smooth split it into sections \begin{equation}
+m = \int \limits_{c_1} + \int \limits_{c_2}
+\end{equation}
+\end{enumerate}
+
+\underline{Line Integral through a Vector Field}:\\
+\indb For $F(x,y,z) = F(x(t),y(t),z(t))$ \& $\vec{r}(t) = x(t)\hat{i} + y(t)\hat{j} + z(t)\hat{k}, \ a\leq t \leq b $
+\begin{equation}
+\int \limits_a^b F(\vec{r}(t)) \cdot \vec{r}'(t)\ dt
+\end{equation}
+\begin{equation}
+w = \int \limits_c F \cdot dr
+\end{equation}
+
+\newpage
+\subsection{Line Integral on a Conservative Vector Field}
+``F'' is conservative if F = $\bigtriangledown f\ $ for some function.
+
+\bigskip
+
+\underline{Conservative Vector Field}: no matter how you set from point a to point b, it is the same amount of work. The line integral is independent of path. We don't need to define a curve.
+
+\bigskip
+\underline{Fundamental Theorem of Line Integrals}
+\begin{equation}
+\int \limits_c F \cdot dr = \int \limits_c \bigtriangledown f \cdot dr = f(b) - f(a)
+\end{equation}
+
+\inda \underline{\#1}: Show ``F'' is conservative
+
+\bigskip 
+\indd $F(x,y) = P\hat{i} + Q\hat{j}$\\
+\indd If $\pary{P} = \parx{Q}$ then F is conservative.
+\bigskip
+
+\indd $(x,y,z) P\hat{i} + Q\hat{j} + R\hat{k}$\\
+\indd Prove $\vcurl F = 0$
+\bigskip
+
+\inda \underline{\#2}: $\bigtriangledown f = \parx{f}\hat{i} + \pary{f}\hat{j} + \parz{f}\hat{k}$
+
+\bigskip
+\indd Integrate a term\\
+\indd Differentiate with respect to another variable \\
+\indd Solve for a the extra function.
+
+
+\subsection{Green's Theorem}
+What if $ \int Pdx + Qdy $ has a curve ``C'' that encloses a region on a plane and ``C'' is a simple, closed, curve that is traveled in the counter-clockwise, then the $\int $ becomes $\oint$
+
+\bigskip
+\underline{Green's Theorem}:
+\begin{equation}
+\oint \limits_c Pdx + Qdy = \iint \limits_R \parx{Q} - \pary{P}\ dA
+\end{equation}
+
+\bigskip
+\underline{Area Formula}:
+\begin{equation}
+A = \frac{1}{2} \oint \limits_c -y dx + x dy
+\end{equation}
+
+\newpage
+\subsection{Surface Integrals}
+\begin{equation}
+m= \iint \limits_S f(x,y,z)\ dS
+\end{equation}
+
+Defining one variable as the surface:
+\begin{equation}
+\iint \limits_S f(x,y,z)\ dS = \iint \limits_R f(x,y,g(x,y))\ \sqrt{g_x^2 + g_y^2 + 1}\ dA
+\end{equation}
+\begin{equation}
+\iint \limits_S f(x,y,z)\ dS = \iint \limits_R f(x,g(x,z),z)\ \sqrt{g_x^2 + g_z^2 + 1}\ dA
+\end{equation}
+\begin{equation}
+\iint \limits_S f(x,y,z)\ dS = \iint \limits_R f(g(y,z),y,z)\ \sqrt{g_y^2 + g_z^2 + 1}\ dA
+\end{equation}
+
+\underline{Parametric Surfaces}:\\
+\indb For f(x,y,z) \&
+$$ x = x(u,v) $$
+$$ y = y(u,v) $$
+$$ z = z(u,v) $$
+\begin{equation}
+f(x,y,z) = \vec{r}(u,v) = x(u,v)\hat{i} + y(u,v)\hat{j} + z(u,v)\hat{k}
+\end{equation}
+\underline{Surface Area}:
+\begin{equation}
+\iint \limits_D \magp{\vec{r}_u \times \vec{r}_v }\ dA
+\end{equation}
+\indb ``D'' is the domain of the parameters of ``u'' and ``v''
+
+\bigskip
+\underline{Parametric Surface Integral}:
+\begin{equation}
+\iint \limits_D f(\vec{r}(u,v))\ \magp{\vec{r}_u \times \vec{r}_v }\ dA
+\end{equation}
+\begin{equation}
+\iint \limits_S P\ dydx + Q\ dzdy + R\ dxdy = \iint \limits_D \left( P\frac{\partial (y,z)}{\partial(u,v)}+Q\frac{\partial (z,x)}{\partial(u,v)}+R\frac{\partial (x,y)}{\partial(u,v)} \right)\ du\ dv
+\end{equation}
+
+\underline{Flux}: If ``F,'' a vector field contains a surface ``S,'' then F describes the velocity of the flow/field at any point across a surface. The rate of flow across the surface is called flux. 
+\begin{equation}
+F \cdot \vec{n}\ A(S)
+\end{equation} For a small area of S. Across an entire surface it becomes:
+\begin{equation}
+\iint \limits_S F \cdot d\textbf{S} = \iint \limits_S F \cdot \vec{n} dS 
+\end{equation}
+\begin{equation}
+d\textbf{S} = \vec{n} dS
+\end{equation}
+\newpage
+For $z=g(x,y)$ and a vector field $F = P\hat{i} + Q\hat{j} + R\hat{k} $
+\begin{equation}
+\iint \limits_S F \cdot dS = \iint \limits_D  \left( -Pg_x - Qg_y + R\right)dA
+\end{equation}
+\begin{equation}
+\iint \limits_S F \cdot dS = \iint \limits_D F(\vec{r}(u,v)) \cdot (\vec{r}_u \times \vec{r}_v \ dA
+\end{equation}
+\underline{Divergence Theorem}: For when ``S'' is a simple closed surface
+\begin{equation}
+\textrm{Flux} = \iint \limits_S F \cdot dS = \iiint \limits_T \vdiv F\ dV
+\end{equation}
+
+\subsection{Stoke's Theorem}
+If a curve ``c'' is not contained in a plane. (Green's Theorem except the region becomes a surface in 3-D)
+\begin{equation}
+\oint \limits_c F \cdot dr = \iint \limits_S \vcurl F \cdot \vec{n}\ dS
+\end{equation}
+When evaluating, thinks of $\vcurl F$ as a vector field and use surface integrals.
+\begin{equation}
+\iint \limits_S \vcurl F \cdot \vec{n}\ dS = \iiint \limits_T \vdiv \left( \vcurl F \right)\ dV
+\end{equation}
+
+\end{flushleft}
+\end{document}
